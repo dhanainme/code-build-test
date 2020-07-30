@@ -1,0 +1,16 @@
+# Build Spec for AWS CodeBuild CI
+
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - apt-get update
+      - apt-get install -y curl gnupg2
+      - pip install pip -U
+      - pip install torch
+
+  build:
+    commands:
+      - nvidia-smi
+      - python -m torch.utils.collect_env
