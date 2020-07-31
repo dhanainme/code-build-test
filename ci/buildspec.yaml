@@ -6,7 +6,7 @@ phases:
   install:
     commands:
       - apt-get update
-      - apt-get install -y curl gnupg2 python3-pip
+      - apt-get install -y curl gnupg2 python3-pip python-pip
       - 
 
   build:
