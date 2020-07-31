@@ -6,13 +6,13 @@ phases:
   install:
     commands:
       - apt-get update
-      - apt-get install -y curl gnupg2 python-pip
-      - pip install builtins torch==1.6.0
+      - apt-get install -y curl gnupg2 python3-pip
+      - pip3 install builtins torch==1.6.0
 
   build:
     commands:
       - nvidia-smi
-      - python -m torch.utils.collect_env
+      - python3 -m torch.utils.collect_env
       - apt-get install --reinstall nvidia-driver-440
       - nvidia-smi
-      - python -m torch.utils.collect_env
+      - python3 -m torch.utils.collect_env
