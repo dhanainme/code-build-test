@@ -15,20 +15,20 @@ phases:
       - pip3 install future psutil torch==1.4.0
       - python3 collect_env.py
       - nvidia-smi
-      - pip uninstall -y torch
+      - pip3 uninstall -y torch
       - pip3 install future psutil torch==1.5.1
       - python3 collect_env.py
       - nvidia-smi
-      - pip uninstall -y torch
+      - pip3 uninstall -y torch
       - pip3 install future psutil torch==1.6.0
       - python3 collect_env.py
       - nvidia-smi
-      - pip uninstall -y torch
+      - pip3 uninstall -y torch
       - pip3 install torch==1.5.1+cu101 -f https://download.pytorch.org/whl/torch_stable.html
       - python3 collect_env.py
       - nvidia-smi
-      - pip uninstall -y torch      
+      - pip3 uninstall -y torch      
       - pip3 install torch==1.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
       - python3 collect_env.py
       - nvidia-smi
-      - pip uninstall -y torch
+      - pip3 uninstall -y torch
