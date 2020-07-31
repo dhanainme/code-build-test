@@ -7,12 +7,12 @@ phases:
     commands:
       - apt-get update
       - apt-get install -y curl gnupg2 python3-pip
-      - pip3 install future psutil torch==1.6.0
+      - pip3 install future psutil torch==1.5.0
 
   build:
     commands:
       - nvidia-smi
       - python3 -m torch.utils.collect_env
-      - apt-get install --reinstall nvidia-driver-440
+      - apt-get install --reinstall -y nvidia-driver-440
       - nvidia-smi
       - python3 -m torch.utils.collect_env
