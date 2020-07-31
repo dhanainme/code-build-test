@@ -6,11 +6,13 @@ phases:
   install:
     commands:
       - apt-get update
-      - apt-get install -y curl gnupg2
-      - pip install pip -U
+      - apt-get install -y curl gnupg2 python-pip
       - pip install torch
 
   build:
     commands:
+      - nvidia-smi
+      - python -m torch.utils.collect_env
+      - apt-get install --reinstall nvidia-driver-440
       - nvidia-smi
       - python -m torch.utils.collect_env
