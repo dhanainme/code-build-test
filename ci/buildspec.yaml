@@ -12,6 +12,7 @@ phases:
   build:
     commands:
       - nvidia-smi
+      - pip3 install -U numpy
       - pip3 install future psutil torch==1.4.0
       - python3 -m torch.utils.collect_env
       - pip uninstall torch
