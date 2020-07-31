@@ -13,6 +13,3 @@ phases:
     commands:
       - nvidia-smi
       - python3 -m torch.utils.collect_env
-      - apt-get install --reinstall -y nvidia-driver-440
-      - nvidia-smi
-      - python3 -m torch.utils.collect_env
