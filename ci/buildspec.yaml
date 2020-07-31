@@ -7,9 +7,16 @@ phases:
     commands:
       - apt-get update
       - apt-get install -y curl gnupg2 python3-pip
-      - pip3 install future psutil torch==1.5.0
+      - 
 
   build:
     commands:
       - nvidia-smi
+      - pip3 install future psutil torch==1.4.0
+      - python3 -m torch.utils.collect_env
+      - pip uninstall torch
+      - pip3 install future psutil torch==1.5.0
+      - python3 -m torch.utils.collect_env
+      - pip uninstall torch
+      - pip3 install future psutil torch==1.6.0
       - python3 -m torch.utils.collect_env
