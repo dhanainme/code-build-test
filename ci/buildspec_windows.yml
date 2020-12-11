@@ -1,0 +1,17 @@
+# Build Spec for AWS CodeBuild CI
+
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - powershell "echo Test"
+
+  build:
+    commands:
+      - powershell "echo Test | tee test_exec.log"
+
+artifacts:
+  files:
+    - test_exec.log
+  name: TS-NIGHTLY-REGRESSION-$(Get-Date -Format "yyyy-MM-dd")
